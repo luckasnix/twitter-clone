@@ -1,5 +1,10 @@
-.sidebar {
+.sideBar {
   position: fixed;
   top: 0px;
   left: 0px;
+}
+.header {
+  position: absolute;
+  top: 0px;
+  left: 300px;
 }

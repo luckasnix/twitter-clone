@@ -1,0 +1,16 @@
+.header {
+  width: calc(100vw - 300px);
+  height: 60px;
+  padding: 0px 24px;
+  display: grid;
+  align-content: center;
+  border-bottom: 1px solid #e6ecf0;
+}
+.header h1 {
+  font: bold 24px 'Quicksand', sans-serif;
+  color: #000000;
+}
+.header p {
+  font: bold 16px 'Quicksand', sans-serif;
+  color: #657786;
+}
