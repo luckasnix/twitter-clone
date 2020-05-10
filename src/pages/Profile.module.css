@@ -6,5 +6,10 @@
 .header {
   position: absolute;
   top: 0px;
-  left: 300px;
+  left: 320px;
+}
+.topicList {
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }

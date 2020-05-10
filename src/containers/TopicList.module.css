@@ -1,14 +1,10 @@
-.sideBar {
-  width: 320px;
+.topicList {
+  width: 400px;
   height: 100vh;
   padding: 32px;
   display: grid;
   align-content: start;
   gap: 8px;
   background: #ffffff;
-  border-right: 1px solid #e6ecf0;
-}
-.navList {
-  display: grid;
-  gap: 8px;
+  border-left: 1px solid #e6ecf0;
 }

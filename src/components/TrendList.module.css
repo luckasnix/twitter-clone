@@ -1,0 +1,29 @@
+.trendList {
+  background: #f5f8fa;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.trendList h1 {
+  padding: 16px;
+  font: bold 20px 'Quicksand', sans-serif;
+  color: #14171a;
+}
+.trendItem {
+  padding: 16px;
+  cursor: pointer;
+}
+.trendItem:hover {
+  background: #e6ecf0;
+}
+.trendItem p:nth-child(1) {
+  font: 14px 'Quicksand', sans-serif;
+  color: #657786;
+}
+.trendItem p:nth-child(2) {
+  font: bold 18px 'Quicksand', sans-serif;
+  color: #14171a;
+}
+.trendItem p:nth-child(3) {
+  font: 16px 'Quicksand', sans-serif;
+  color: #657786;
+}

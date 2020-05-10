@@ -31,7 +31,7 @@ function SideBar({ id, className, style }) {
     >
       <ul className={styles.navList}>
         {navItems.map((navItem) => {
-          return <NavItem {...navItem}/>
+          return <NavItem key={navItem.label} {...navItem}/>
         })}
       </ul>
       <PostButton/>
