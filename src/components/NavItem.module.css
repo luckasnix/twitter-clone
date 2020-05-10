@@ -1,0 +1,31 @@
+.navItem {
+  padding: 12px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.navItem svg {
+  width: 24px;
+  height: 24px;
+}
+.navItem p {
+  font: bold 16px 'Quicksand', sans-serif;
+}
+.navItem:hover {
+  background: #e8f5fe;
+  color: #1a91da;
+}
+.navItem:hover > svg path {
+  fill: #1a91da;
+}
+.active {
+  background: #e8f5fe;
+  color: #1a91da;
+}
+.active svg path {
+  fill: #1a91da;
+}

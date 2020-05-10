@@ -1,9 +1,10 @@
 import React from 'react'
+import Profile from './pages/Profile'
 
 function App() {
   return (
     <div>
-      <h1>Twitter Clone</h1>
+      <Profile/>
     </div>
   )
 }
