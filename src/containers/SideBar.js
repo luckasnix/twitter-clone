@@ -1,6 +1,6 @@
 import React from 'react'
 import NavItem from '../components/NavItem'
-import PostButton from '../components/PostButton'
+import TweetButton from '../components/TweetButton'
 import { ReactComponent as HomeIcon } from '../assets/svgs/home.svg'
 import { ReactComponent as ExploreIcon } from '../assets/svgs/explore.svg'
 import { ReactComponent as NotificationsIcon } from '../assets/svgs/notifications.svg'
@@ -22,7 +22,7 @@ const navItems = [
   { label: 'More', icon: MoreIcon, active: false },
 ]
 
-function SideBar({ id, className, style }) {
+function SideBar({ id, className, style, onOpen }) {
   return (
     <aside
       id={id}
@@ -34,7 +34,7 @@ function SideBar({ id, className, style }) {
           return <NavItem key={navItem.label} {...navItem}/>
         })}
       </ul>
-      <PostButton/>
+      <TweetButton onOpen={onOpen}/>
     </aside>
   )
 }
