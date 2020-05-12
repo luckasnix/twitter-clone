@@ -12,11 +12,11 @@ function TweetModal({ onClose }) {
     evt.preventDefault()
     const tweet = {
       content: msg,
-      coments: 0,
+      comments: 0,
       retweets: 0,
       likes: 0,
     }
-    firebase.database().ref('tweets').push().set(tweet)
+    firebase.database().ref('tweets').push(tweet)
       .then(() => {
         onClose()
       })
@@ -28,6 +28,7 @@ function TweetModal({ onClose }) {
         value={msg}
         onChange={handleMsgChange}
         onSubmit={handleMsgSubmit}
+        onClose={onClose}
       />
     </>
   )

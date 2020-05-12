@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactComponent as CloseIcon } from '../assets/svgs/close.svg'
 import styles from './TweetForm.module.css'
 
-function TweetForm({ id, className, style, value, onChange, onSubmit }) {
+function TweetForm({ id, className, style, value, onChange, onSubmit, onClose }) {
   return (
     <div
       id={id}
@@ -10,7 +10,7 @@ function TweetForm({ id, className, style, value, onChange, onSubmit }) {
       style={style}
     >
       <div className={styles.controls}>
-        <button>
+        <button onClick={onClose}>
           <CloseIcon/>
         </button>
       </div>

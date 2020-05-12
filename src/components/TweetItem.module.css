@@ -1,0 +1,60 @@
+.tweetItem {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6ecf0;
+  cursor: pointer;
+}
+.tweetItem:hover {
+  background: #f5f8fa;
+}
+.avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.content {
+  display: grid;
+  gap: 16px;
+}
+.author {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 8px;
+}
+.author p {
+  font: bold 18px 'Quicksand', sans-serif;
+  color: #000000;
+}
+.author span {
+  font: 16px 'Quicksand', sans-serif;
+  color: #657786;
+}
+.msg p {
+  font: 16px 'Quicksand', sans-serif;
+  color: #000000;
+}
+.options {
+  display: grid;
+  grid-auto-flow: column;
+}
+.options div {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 8px;
+}
+.options div p {
+  font: 16px 'Quicksand', sans-serif;
+  color: #657786;
+}
+.options div svg {
+  width: 20px;
+  height: 20px;
+  fill: #657786;
+}

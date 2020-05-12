@@ -1,0 +1,4 @@
+.tweetList {
+  width: calc(100vw - 720px);
+  height: auto;
+}
