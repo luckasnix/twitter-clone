@@ -11,6 +11,7 @@ import { ReactComponent as ProfileIcon } from '../assets/svgs/profile.svg'
 import { ReactComponent as MoreIcon } from '../assets/svgs/more.svg'
 import styles from './SideBar.module.css'
 
+// fake items in the side bar
 const navItems = [
   { label: 'Home', icon: HomeIcon, active: false },
   { label: 'Explore', icon: ExploreIcon, active: false },

@@ -6,7 +6,7 @@ import styles from './UserModal.module.css'
 
 function UserModal({ id, className, style, onClose }) {
   const { user } = useContext(UserContext)
-  // controling username changes
+  // controlling username changes
   const [username, setUsername] = useState(user.username)
   const handleUsernameChange = useCallback((evt) => {
     setUsername(evt.target.value)
@@ -18,7 +18,7 @@ function UserModal({ id, className, style, onClose }) {
         onClose()
       })
   }, [username, onClose])
-  // controling nickname changes
+  // controlling nickname changes
   const [nickname, setNickname] = useState(user.nickname)
   const handleNicknameChange = useCallback((evt) => {
     setNickname(evt.target.value)

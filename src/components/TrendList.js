@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './TrendList.module.css'
 
+// fake items in the trend list
 const trendList = [
   { subject: 'Music', term: '#Grammy', tweetsQty: 264975 },
   { subject: 'Sports', term: '#FIFA', tweetsQty: 8547096 },

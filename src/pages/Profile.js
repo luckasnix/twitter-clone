@@ -33,6 +33,7 @@ function Profile() {
     setShowUserModal(false)
   }, [])
   useEffect(() => {
+    // useEffect running once and watching changes
     firebase.database().ref('tweets').on('child_added', (snapshot) => {
       const tweet = {
         id: snapshot.key,

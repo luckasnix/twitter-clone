@@ -4,6 +4,7 @@ import TrendList from '../components/TrendList'
 import styles from './TopicList.module.css'
 
 function TopicList({ id, className, style}) {
+  // controlling search terms changes
   const [terms, setTerms] = useState('')
   const handleTermsChange = useCallback((evt) => {
     setTerms(evt.target.value)

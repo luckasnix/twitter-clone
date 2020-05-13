@@ -5,7 +5,9 @@ import UserContext from '../contexts/user/Context'
 import styles from './TweetList.module.css'
 
 function TweetList({ id, className, style }) {
+  //fetching tweets data in the context
   const { tweets } = useContext(TweetsContext)
+  // fetching user data in the context
   const { user } = useContext(UserContext)
   return (
     <ul

@@ -4,7 +4,9 @@ import UserContext from '../contexts/user/Context'
 import styles from './Header.module.css'
 
 function Header({ id, className, style }) {
+  //fetching tweets data in the context
   const { tweets } = useContext(TweetsContext)
+  // fetching user data in the context
   const { user } = useContext(UserContext)
   return (
     <header

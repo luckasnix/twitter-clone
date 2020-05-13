@@ -4,6 +4,7 @@ import UserContext from '../contexts/user/Context'
 import styles from './UserDetails.module.css'
 
 function UserDetails({ id, className, style, onOpen }) {
+  // fetching user data in the context
   const { user } = useContext(UserContext)
   return (
     <div
