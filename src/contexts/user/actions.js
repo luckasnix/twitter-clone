@@ -14,4 +14,18 @@ function updateNickname(nickname) {
   }
 }
 
-export { updateUsername, updateNickname }
+function updateProfileUrl(url) {
+  return {
+    type: types.UPDATE_PROFILE_URL,
+    payload: { url },
+  }
+}
+
+function updateCoverUrl(url) {
+  return {
+    type: types.UPDATE_COVER_URL,
+    payload: { url },
+  }
+}
+
+export { updateUsername, updateNickname, updateProfileUrl, updateCoverUrl }

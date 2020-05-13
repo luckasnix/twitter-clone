@@ -12,6 +12,16 @@ function reducer(state, action) {
         ...state,
         nickname: action.payload.nickname,
       }
+    case types.UPDATE_PROFILE_URL:
+      return {
+        ...state,
+        profileUrl: action.payload.url
+      }
+    case types.UPDATE_COVER_URL:
+      return {
+        ...state,
+        coverUrl: action.payload.url
+      }
     default:
       throw new Error()
   }

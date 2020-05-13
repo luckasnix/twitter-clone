@@ -12,7 +12,9 @@ function UserForm({
   nicknameValue,
   onNicknameChange,
   onNicknameSubmit,
-  onClose
+  onProfileChange,
+  onCoverChange,
+  onClose,
 }) {
   return (
     <div
@@ -41,6 +43,10 @@ function UserForm({
         />
         <button type='submit'>Update Nickname</button>
       </form>
+      <input id='profile-file' type='file' onChange={onProfileChange}/>
+      <label htmlFor='profile-file'>Choose a profile</label>
+      <input id='cover-file' type='file' onChange={onCoverChange}/>
+      <label htmlFor='cover-file'>Choose a cover</label>
     </div>
   )
 }

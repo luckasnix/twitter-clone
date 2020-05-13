@@ -44,6 +44,14 @@ function Profile() {
       dispatchToUser(userActions.updateUsername(snapshot.val().username))
       dispatchToUser(userActions.updateNickname(snapshot.val().nickname))
     })
+    firebase.storage().ref('user').child('profile').getDownloadURL()
+      .then((url) => {
+        dispatchToUser(userActions.updateProfileUrl(url))
+      })
+    firebase.storage().ref('user').child('cover').getDownloadURL()
+      .then((url) => {
+        dispatchToUser(userActions.updateCoverUrl(url))
+      })
   }, [dispatchToTweets, dispatchToUser])
   return (
     <>

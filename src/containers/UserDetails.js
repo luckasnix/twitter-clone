@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import UserButton from '../components/UserButton'
 import UserContext from '../contexts/user/Context'
-import coverImg from '../assets/images/cover.jpg'
-import profileImg from '../assets/images/profile.jpg'
 import styles from './UserDetails.module.css'
 
 function UserDetails({ id, className, style, onOpen }) {
@@ -14,8 +12,8 @@ function UserDetails({ id, className, style, onOpen }) {
       style={style}
     >
       <div className={styles.userImgs}>
-        <img src={coverImg} alt='Foto de capa'/>
-        <img src={profileImg} alt='Foto de perfil'/>
+        <img src={user.coverUrl} alt='Foto de capa'/>
+        <img src={user.profileUrl} alt='Foto de perfil'/>
       </div>
       <div className={styles.userInfo}>
         <p>{user.username}</p>

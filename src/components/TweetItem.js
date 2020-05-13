@@ -2,7 +2,6 @@ import React from 'react'
 import { ReactComponent as CommentsIcon } from '../assets/svgs/comments.svg'
 import { ReactComponent as RetweetsIcon } from '../assets/svgs/retweets.svg'
 import { ReactComponent as LikesIcon } from '../assets/svgs/likes.svg'
-import profileImg from '../assets/images/profile.jpg'
 import styles from './TweetItem.module.css'
 
 function TweetItem({ id, className, style, tweet, user }) {
@@ -13,7 +12,7 @@ function TweetItem({ id, className, style, tweet, user }) {
       style={style}
     >
       <div className={styles.avatar}>
-        <img src={profileImg} alt='Imagem de perfil'/>
+        <img src={user.profileUrl} alt='Imagem de perfil'/>
       </div>
       <div className={styles.content}>
         <div className={styles.author}>

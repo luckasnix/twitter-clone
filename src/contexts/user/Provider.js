@@ -6,6 +6,8 @@ function Provider({ children }) {
   const [user, dispatchToUser] = useReducer(reducer, {
     username: '',
     nickname: '',
+    profileUrl: '',
+    coverUrl: '',
   })
   return (
     <Context.Provider value={{ user, dispatchToUser }}>
