@@ -2,19 +2,41 @@
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 1;
 }
 .header {
   position: fixed;
   top: 0px;
   left: 320px;
+  z-index: 1;
 }
-.tweetList {
+.userDetails {
   position: absolute;
   top: 60px;
   left: 320px;
+  z-index: 0;
+}
+.tweetList {
+  position: absolute;
+  top: 380px;
+  left: 320px;
+  z-index: 1;
 }
 .topicList {
   position: fixed;
   top: 0px;
   right: 0px;
+  z-index: 1;
+}
+.tweetModal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+.userModal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
 }

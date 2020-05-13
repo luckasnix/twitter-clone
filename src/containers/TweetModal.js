@@ -3,7 +3,7 @@ import TweetForm from '../components/TweetForm'
 import firebase from '../services/firebase'
 import styles from './TweetModal.module.css'
 
-function TweetModal({ onClose }) {
+function TweetModal({ id, className, style, onClose }) {
   const [msg, setMsg] = useState('')
   const handleMsgChange = useCallback((evt) => {
     setMsg(evt.target.value)
@@ -22,7 +22,11 @@ function TweetModal({ onClose }) {
       })
   }, [msg, onClose])
   return (
-    <>
+    <div
+      id={id}
+      className={[className, styles.tweetModal].join(' ')}
+      style={style}
+    >
       <div className={styles.backdrop} onClick={onClose}/>
       <TweetForm
         value={msg}
@@ -30,7 +34,7 @@ function TweetModal({ onClose }) {
         onSubmit={handleMsgSubmit}
         onClose={onClose}
       />
-    </>
+    </div>
   )
 }
 

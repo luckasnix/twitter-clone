@@ -1,15 +1,18 @@
-.tweetButton {
+.userButton {
   padding: 12px;
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
   gap: 12px;
-  background: #1a91da;
-  border: none;
+  background: transparent;
+  border: 2px solid #1a91da;
   border-radius: 24px;
   cursor: pointer;
 }
-.tweetButton p {
+.userButton p {
   font: bold 16px 'Quicksand', sans-serif;
-  color: #ffffff;
+  color: #1a91da;
+}
+.userButton:hover {
+  background: #e6ecf0;
 }

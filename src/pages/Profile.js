@@ -1,22 +1,36 @@
 import React, { useState, useCallback, useContext, useEffect } from 'react'
 import SideBar from '../containers/SideBar'
 import Header from '../containers/Header'
+import UserDetails from '../containers/UserDetails'
 import TweetList from '../containers/TweetList'
 import TopicList from '../containers/TopicList'
 import TweetModal from '../containers/TweetModal'
+import UserModal from '../containers/UserModal'
 import firebase from '../services/firebase'
 import TweetsContext from '../contexts/tweets/Context'
+import UserContext from '../contexts/user/Context'
 import * as tweetsActions from '../contexts/tweets/actions'
+import * as userActions from '../contexts/user/actions'
 import styles from './Profile.module.css'
 
 function Profile() {
   const { dispatchToTweets } = useContext(TweetsContext)
-  const [showModal, setShowModal] = useState(false)
-  const handleModalOpen = useCallback(() => {
-    setShowModal(true)
+  const { dispatchToUser } = useContext(UserContext)
+  // controling TweetModal visibility
+  const [showTweetModal, setShowTweetModal] = useState(false)
+  const handleTweetModalOpen = useCallback(() => {
+    setShowTweetModal(true)
   }, [])
-  const handleModalClose = useCallback(() => {
-    setShowModal(false)
+  const handleTweetModalClose = useCallback(() => {
+    setShowTweetModal(false)
+  }, [])
+  // controling UserModal visibility
+  const [showUserModal, setShowUserModal] = useState(false)
+  const handleUserModalOpen = useCallback(() => {
+    setShowUserModal(true)
+  }, [])
+  const handleUserModalClose = useCallback(() => {
+    setShowUserModal(false)
   }, [])
   useEffect(() => {
     firebase.database().ref('tweets').on('child_added', (snapshot) => {
@@ -26,14 +40,20 @@ function Profile() {
       }
       dispatchToTweets(tweetsActions.addTweet(tweet))
     })
-  }, [dispatchToTweets])
+    firebase.database().ref('user').on('value', (snapshot) => {
+      dispatchToUser(userActions.updateUsername(snapshot.val().username))
+      dispatchToUser(userActions.updateNickname(snapshot.val().nickname))
+    })
+  }, [dispatchToTweets, dispatchToUser])
   return (
     <>
-      <SideBar className={styles.sideBar} onOpen={handleModalOpen}/>
+      <SideBar className={styles.sideBar} onOpen={handleTweetModalOpen}/>
       <Header className={styles.header}/>
+      <UserDetails className={styles.userDetails} onOpen={handleUserModalOpen}/>
       <TweetList className={styles.tweetList}/>
       <TopicList className={styles.topicList}/>
-      {showModal && <TweetModal onClose={handleModalClose}/>}
+      {showTweetModal && <TweetModal className={styles.tweetModal} onClose={handleTweetModalClose}/>}
+      {showUserModal && <UserModal className={styles.userModal} onClose={handleUserModalClose}/>}
     </>
   )
 }

@@ -4,6 +4,7 @@
   padding: 0px 24px;
   display: grid;
   align-content: center;
+  background: #ffffff;
   border-bottom: 1px solid #e6ecf0;
 }
 .header h1 {
